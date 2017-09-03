@@ -51,8 +51,8 @@ class HomeView extends React.Component {
             <img src={DuckImage} />
           </div>
           <center>
-            <h2>HTML to PDF</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+            <h2 style={ {color: 'red'} }>HTML to PDF</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
           </center>
         </div>
         <button onClick={this.pdfToHTML}>Download PDF</button>
