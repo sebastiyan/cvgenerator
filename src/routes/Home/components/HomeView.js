@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DuckImage from '../assets/Duck.jpg'
 import './HomeView.scss'
 import pdfConverter from 'jspdf';
+import $ from 'jquery'; 
 
 class HomeView extends React.Component {
   constructor(props){
@@ -9,9 +10,11 @@ class HomeView extends React.Component {
     this.pdfToHTML=this.pdfToHTML.bind(this);
   }
 
-  pdfToHTML(){
+  pdfToHTML = () => {
+    console.log('clicked');
     var pdf = new pdfConverter('p', 'pt', 'letter');
-    var source = '<div><center><h2>HTML to PDF</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing </p></center></div>'
+    var source = $('#HTMLtoPDF')[0];
+    debugger
     var specialElementHandlers = {
       '#bypassme': function(element, renderer) {
         return true
@@ -43,7 +46,7 @@ class HomeView extends React.Component {
   render() {
     return (
       <div>
-        <div classID="HTMLtoPDF">
+        <div id="HTMLtoPDF">
           <center>
             <h2>HTML to PDF</h2>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
