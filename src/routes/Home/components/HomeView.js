@@ -47,6 +47,9 @@ class HomeView extends React.Component {
     return (
       <div>
         <div id="HTMLtoPDF">
+          <div>
+            <img src={DuckImage} />
+          </div>
           <center>
             <h2>HTML to PDF</h2>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
